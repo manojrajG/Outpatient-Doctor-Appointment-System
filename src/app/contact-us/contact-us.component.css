@@ -1,0 +1,100 @@
+/* Contact Us Section Styles */
+.contact-us {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f4f7fa; /* Optional background color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;  /* Centers the container */
+    padding: 0 20px;
+}
+
+.contact-us h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+h3 {
+    font-size: 28px;
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* Branches container using Flexbox */
+.branches {
+    display: flex;
+    justify-content: space-between; /* Ensure the branches are spaced evenly */
+    gap: 20px; /* Gap between each branch */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-top: 20px;
+}
+
+.branch {
+    flex: 1 1 calc(20% - 20px); /* Each branch takes up 20% of the container */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-size: 16px;
+    text-align: left;
+    box-sizing: border-box; /* Make sure padding does not affect the box size */
+    min-height: 200px; /* Minimum height to keep branches visually aligned */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure content is distributed without extra space */
+}
+
+/* Ensure all the branches are aligned properly */
+.branch strong {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.branch:nth-child(odd) {
+    background-color: #f1f1f1; /* Optional: different background for odd branches */
+}
+
+/* Responsive Styles for Tablets and Mobile Devices */
+
+/* For Tablet Devices (Width <= 1024px) */
+@media (max-width: 1024px) {
+    .branch {
+        flex: 1 1 calc(33.333% - 20px); /* 3 branches per row */
+    }
+}
+
+/* For Mobile Devices (Width <= 768px) */
+@media (max-width: 768px) {
+    .branch {
+        flex: 1 1 calc(50% - 20px); /* 2 branches per row */
+    }
+}
+
+/* For Very Small Screens (Width <= 480px) */
+@media (max-width: 480px) {
+    .branch {
+        flex: 1 1 100%; /* 1 branch per row */
+    }
+}

@@ -1,0 +1,74 @@
+/* About Section Styles */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 20px;
+    overflow: hidden;
+  }
+  
+  .about-content {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+    text-align: right;
+  }
+  
+  .about-content h2 {
+    font-size: 2.5rem;  /* Set larger font size */
+    color: #333;  /* Dark text color */
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  .about-image {
+    flex: 1;
+    max-width: 50%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .about-image img {
+    width: 80%;
+    object-fit: cover;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: slideUp 1.5s forwards ease-out;
+    border-radius: 10px; 
+  }
+  
+  /* Keyframe animation for the image */
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-content {
+      max-width: 100%;
+      padding: 20px;
+    }
+  
+    .about-image {
+      max-width: 80%;
+      margin-top: 20px;
+    }
+  }
+  

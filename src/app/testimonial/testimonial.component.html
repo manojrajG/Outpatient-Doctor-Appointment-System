@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Testimonial Slider</title>
+</head>
+<body>
+    <section id="testimonial" class="testimonial-section">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-slider">
+            <div class="slider-wrapper">
+                <div class="testimonial-card">
+                    <div class="reviewer-name">John Doe</div>
+                    <div class="review-content">"Great service! The appointment process was smooth and quick."</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="reviewer-name">Jane Smith</div>
+                    <div class="review-content">"Very convenient! I was able to find the perfect doctor without any hassle."</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="reviewer-name">Mark Johnson</div>
+                    <div class="review-content">"Highly recommend! Excellent experience from start to finish."</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="reviewer-name">Emma Williams</div>
+                    <div class="review-content">"Fantastic platform! It saved me a lot of time."</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="reviewer-name">Liam Brown</div>
+                    <div class="review-content">"Excellent customer support and reliable service."</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sliderWrapper = document.querySelector('.slider-wrapper');
+            const cards = document.querySelectorAll('.testimonial-card');
+            let currentIndex = 0;
+
+            function updateSliderPosition() {
+                const cardWidth = cards[0].offsetWidth + 15; // Include gap between cards
+                sliderWrapper.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            }
+
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % cards.length;
+                updateSliderPosition();
+            }, 3000); // Slide every 3 seconds
+
+            // Update position on window resize
+            window.addEventListener('resize', updateSliderPosition);
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,55 @@
+/* Footer Styles */
+.footer {
+    background-color: #020645; /* Dark background color */
+    color: #fff; /* Text color */
+    padding: 20px 0;
+    position: relative; /* To ensure it covers full width */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Adds space on the sides */
+    display: flex;
+    justify-content: space-between; /* Aligns content to the left and social media icons to the right */
+    align-items: center; /* Centers content vertically */
+}
+
+.footer-content p {
+    font-size: 16px;
+    margin: 0; /* Removes default margin from <p> */
+}
+
+.social-media {
+    display: flex;
+    gap: 15px; /* Adds space between each icon */
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    stroke: white;
+    fill: transparent;
+    transition: all 0.3s ease; /* Smooth transition */
+    cursor: pointer;
+}
+
+/* Hover Effect for Social Icons */
+.social-icon:hover {
+    stroke: #007bff; /* Blue color for stroke */
+    fill: #007bff; /* Blue color for fill */
+    filter: drop-shadow(0 0 10px #007bff); /* Neon glow effect */
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* Center the text on smaller screens */
+    }
+
+    .social-media {
+        margin-top: 10px;
+    }
+}
